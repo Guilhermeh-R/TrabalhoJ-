@@ -1,0 +1,238 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+    overflow-x: hidden;  
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+}
+
+.navbar-toggler {
+    background-color: whitesmoke;
+}
+
+#links{
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+#links2{
+    text-decoration: none;
+    color: gray;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.abaixoheader{
+    background-color: rgba(128, 128, 128, 0.474);
+    display: flex;
+    justify-content: space-evenly;
+    height: 75px;
+    align-items: center;
+}
+.meio{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    
+}
+.meiotexto{
+    display: block;
+    align-items: center;
+    padding-right: 50px;
+}
+.rating{
+    display: flex;
+    margin-left: 50px;
+    align-items: baseline;
+    overflow: hidden;
+    
+}
+.estrelas{
+    color: yellow;
+}
+#textoestrelas {
+    margin-right: 20px;
+    padding-left: 10px;
+    width: auto;
+}
+.navheader{
+    margin-right: 50px;
+}
+#butaonav{
+    width: 200px;
+    background-color: rgb(174, 174, 174);
+    border-radius: 5px;
+    border: none;
+}
+#botaomain{
+    height: 45px;
+    background-color: #003366;
+    color: white;
+    border-radius: 5px;
+    border: none;
+
+}
+#maininput{
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.44);
+    border: none;
+
+}
+.buscarmain{
+    display: flex;
+    justify-content: left;
+}
+li{
+    text-decoration: none;
+}
+#links:hover{
+    color: rgb(141, 141, 141);
+}
+#links2:hover{
+    color:rgba(128, 128, 128, 0.393);
+}
+#botaomain:hover{
+    background-color: #0033667d;
+}
+#butaonav:hover{
+    background-color: rgb(243, 242, 242);
+}
+
+
+#navbugada {
+    position: absolute;
+    right: 0; 
+    left: auto
+}
+
+#navbarSearch {
+    align-items: baseline;
+}
+
+@media only screen and (max-width: 750px){
+
+    header{
+        align-items: center;
+        justify-content: center;
+    }
+    #navbugada {
+        position: static; /* Faz com que o menu fique dentro do fluxo normal do documento em telas menores */
+    }
+    #links{
+        display: none;
+    }
+    #butaonav{
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 45px;
+    }
+    .abaixoheader{
+        display: none;
+        flex-wrap: wrap;
+    }
+    #imgmain{
+        display: none;
+    }
+    .meiotexto{
+        overflow: hidden;
+        padding-top: 70px;
+    }
+    #maininput{
+        width: 250px;
+    }
+    .estrelas{
+        width: 16;
+        display: flex;
+    }
+    .rating{
+        display: flex;
+        padding-top: 100px;
+    }
+    .buscarmain{
+        padding-top: 60px;
+    }
+    .h1main{
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 1250px){
+    header{
+        align-items: center;
+        justify-content: center;
+    }
+    #links{
+        display: none;
+    }
+    #butaonav{
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 45px;
+    }
+    #navbugada {
+        position: static; /* Faz com que o menu fique dentro do fluxo normal do documento em telas menores */
+    }
+    .abaixoheader{
+        display: none;
+        flex-wrap: wrap;
+    }
+    .corpoindex {
+        overflow: hidden;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: inline-block;
+    }
+    #imgmain{
+        display: none;
+    }
+    .meiotexto{
+        padding-top: 70px;
+    }
+    #maininput{
+        width: 250px;
+    }
+    .estrelas{
+        width: 16;
+        display: flex;
+    }
+    .rating{
+        display: inline-block;
+        padding-top: 100px;
+        margin-left: 0%;
+    }
+    .estrelas{
+        top: 0;
+        left: 0;
+        transform: translate(40%, 410%);
+    }
+    #textoestrelas{
+        padding-left: 10px;
+        width: 100%;
+    }
+    .estrelas2 {
+        width: 100%;
+        text-align: left;
+        top: 0;
+        left: 0;
+        transform: translate(6%, 5%);
+    }
+    .buscarmain{
+        padding-top: 60px;
+        overflow: hidden;
+    }
+    .h1main{
+        padding-bottom: 30px;
+    }
+}

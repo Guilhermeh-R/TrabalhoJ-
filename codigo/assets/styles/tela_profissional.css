@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDEDED;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDEDED;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input,
+.search-bar button {
+    padding: 5px 10px;
+    border: none;
+}
+
+.search-bar button {
+    background-color: #0066cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #004999;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    background-color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 1.5%;
+}
+
+#sidebar {
+    width: 20%;
+}
+
+.sidebar-img {
+    display: block;
+    width: 60px;
+    margin: 20px auto;
+    padding: 5px;
+    border: solid 0.1px gray;
+    border-radius: 10%;
+}
+
+#content {
+    width: 70%;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+#rating {
+    background-color: #FFD700;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#contact-btn {
+    margin-top: 20px;
+    margin-left: 10px; 
+    display: inline-flex;
+    align-items: baseline;
+    text-decoration: none;
+}
+#contact-btn button {
+    padding: 0px 15px;
+    background-color: #34C634;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.aside-container {
+    margin: 20px 65px 20px 0;
+    width: 550px;
+    border: 0.1px solid gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .garantia-selo {
+    width: 100px;
+    height: 100px;
+    /* Se desejar ajustar o tamanho do selo, modifique as propriedades width e height */
+  }
+
+  .parceiro-selo {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .whatsapp-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #p1 {
+    color: green;
+    font-weight: bold;
+  }
+
+  #p2 {
+    color: gray;
+    font-weight: bold;
+  }
+
+  .visitagratis {
+    font-size: small;
+    font-style:oblique;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .selos {
+    display: flex;
+    align-items: baseline;
+
+  }
+
+
+
+@media only screen and (max-width: 750px){
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    order: 1;
+}
+
+#sidebargrande {
+    order: 2;
+}
+
+#sidebar {
+    order: 3;
+    justify-content: center;
+}
+
+.aside-container {
+    order: 4;
+}
+
+}
+
+@media only screen and (max-width: 1250px){
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        overflow: hidden;
+    }
+
+    #navbugada {
+        position: absolute;
+        right: 0; 
+        left: auto
+    }
+    
+    #navbarSearch {
+        align-items: baseline;
+    }
+
+    #content {
+        order: 1;
+        width: auto;
+    }
+
+    #rating {
+        margin: 5% 0 5% 0;
+    }
+
+    #sidebargrande {
+        order: 2;
+        width: 50%;
+    }
+
+    #sidebar {
+        order: 3;
+        justify-content: center;
+        width: auto;
+    }
+
+    .aside-container {
+        order: 4;
+        width: auto;
+        width: 100%;
+    }
+}

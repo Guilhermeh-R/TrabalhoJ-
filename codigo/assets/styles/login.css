@@ -1,0 +1,185 @@
+/* Base reset for padding and margin */
+* {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/* Base body styles */
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #d8e6fa;*/
+    background-image: url('../src/img/prestadoresdeservico.jpg');
+    background-size: cover; /* Garante que a imagem cobrirá todo o corpo */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    margin: 0;
+    height: 100%;
+    opacity: 0.85;
+}
+
+/*
+header {
+    padding: 1rem;
+    background-color: #0056b3;
+}
+*/
+
+#logintitulo {
+    align-items: center;
+    text-align: center;
+    color: black;
+    opacity: 1;
+}
+
+#semconta {
+    text-decoration: none;
+    margin-top: 4vh;
+    align-items: center;
+    text-align: center;
+    color: black;
+    opacity: 1;
+}
+
+#cadastrese {
+    color: blue;
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* Flex container for main content */
+.auth-main {
+    opacity: 1;
+    display: flex;
+    flex-direction: row; /* Default to row, but will change to column on smaller screens */
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Image styles */
+#imagemPrincipal {
+    width: 100%; /* Responsive image */
+    max-width: 600px; /* Adjust based on your design needs */
+    height: auto;
+    border-radius: 25px 0 0 25px;
+}
+
+/* Form section styles */
+.auth-content {
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 50%);
+    opacity: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    width: 100%;
+    max-height: calc(100vh - 21.8rem); /* Sets max height to viewport height minus vertical padding */
+    max-width: 400px; /* Adjust based on your design needs */
+    overflow-y: auto; /* Scrollbar for overflow */
+}
+.auth-content2 {
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 12%);
+    opacity: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px; /* Adjust based on your design needs */
+    overflow-y: auto; /* Scrollbar for overflow */
+}
+.auth-content3 {
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 5%);
+    opacity: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    width: auto;
+    overflow-y: auto; /* Scrollbar for overflow */
+}
+
+.seisperguntas {
+    margin-right: 70px;
+}
+
+#dozeperguntas {
+    display: flex;
+    height: auto;
+}
+
+#botaodeentrar {
+    height: auto;
+}
+
+#loginForm,
+#addUserForm {
+    margin-top: 8vh;
+}
+
+.input-group > label,
+#botaodeentrar {
+    font-weight: bold;
+}
+
+/* Input and button styles */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    opacity: 1;
+}
+
+button {
+    width: 100%;
+    padding: .75rem;
+    background-color: #003366;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #imagemPrincipal {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .auth-content {
+        margin-left: 0;
+        max-width: 90%;
+        height: auto;
+    }
+    .auth-content2 {
+        margin-left: 0;
+        max-width: 90%;
+        height: auto;
+    }
+}

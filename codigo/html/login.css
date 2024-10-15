@@ -1,0 +1,95 @@
+/* Base reset for padding and margin */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8e6fa;
+}
+
+/* Header styles */
+header {
+    padding: 1rem;
+}
+
+.botaoVoltar {
+    width: 15%;
+    margin-left: 10%;
+}
+
+/* Flex container for main content */
+.auth-main {
+    display: flex;
+    flex-direction: row; /* Default to row, but will change to column on smaller screens */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Image styles */
+#imagemPrincipal {
+    width: 100%; /* Responsive image */
+    max-width: 600px; /* Adjust based on your design needs */
+    height: auto;
+    border-radius: 25px 0 0 25px;
+}
+
+/* Form section styles */
+.auth-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0px 10px 10px 0;
+    width: 100%;
+    height: 400px;
+    max-width: 400px; /* Adjust based on your design needs */
+    overflow-y: auto; /* Scrollbar for overflow */
+}
+
+/* Input and button styles */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: .75rem;
+    background-color: #003366;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #imagemPrincipal {
+        max-width: 100%;
+    }
+
+    .auth-content {
+        margin-left: 0;
+        max-width: 90%;
+    }
+}

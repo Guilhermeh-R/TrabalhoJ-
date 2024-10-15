@@ -1,0 +1,30 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: TrabalhoJá
+authors:
+  - family-names: Guimarães
+    given-names: Luan
+  - family-names: Rodrigues
+    given-names: Bernardo
+  - family-names: Rodrigues
+    given-names: Guilherme
+  - family-names: Pedro Avelar Xavier
+    given-names: Lorran
+  - family-names: Diniz
+    given-names: Luciana Mara Freitas
+    name-suffix: Professora
+    affiliation: PUC-minas
+  - family-names: Tavares
+    given-names: Cleiton Silva
+    name-suffix: Professor
+    affiliation: PUC-minas
+keywords:
+  - Serviços Profissionais
+  - Feedback de serviços
+  - Diversidade de Categorias
+  - Perfis Detalhados
+  - Credibilidade
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2023-2-ti1-2401100-trabalhoja
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2023-12-11

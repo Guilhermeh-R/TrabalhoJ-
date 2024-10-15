@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se - Trabalho Já</title>
+    <link rel="stylesheet" href="../assets/styles/login.css">
+</head>
+<body>
+    <main class="auth-main">
+        <!--
+        <section>
+            <img src="../assets/src/img/prestadoresdeservico.jpg" alt="trabalhadores" id="imagemPrincipal">
+        </section>
+        -->
+        <section class="auth-content3">
+            <h1 id="logintitulo">Seja um profissional</h1>
+            <form id="addUserForm">
+            <div id="dozeperguntas">
+                <div class="seisperguntas">
+                    <div class="input-group">
+                        <label for="username">Nome:</label>
+                        <input type="text" id="username" placeholder="Seu nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Seu email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" placeholder="Sua senha" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="document">CPF:</label>
+                        <input type="text" id="document" placeholder="Número do CPF" required>
+                    </div>
+                </div>
+
+                <div class="seisperguntas">
+                    <div class="input-group">
+                        <label for="address">Endereço:</label>
+                        <input type="text" id="address" placeholder="Endereço" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" placeholder="Telefone" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="category">Categoria:</label>
+                        <select id="category" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Saude">Saúde</option>
+                            <option value="Eventos">Eventos</option>
+                            <option value="Reformas">Reformas</option>
+                            <option value="Aulas">Aulas</option>
+                            <option value="Moda">Moda</option>
+                            <option value="Juridica">Jurídica</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="description">Descrição:</label>
+                        <textarea id="description" placeholder="Descrição" required></textarea>
+                    </div>
+                </div>
+
+                <div class="seisperguntas">
+                    <div class="input-group">
+                        <label for="image">Imagem:</label>
+                        <input type="url" id="image" placeholder="URL da imagem">
+                    </div>
+                    <div class="input-group">
+                        <label for="main_image">Imagem Principal:</label>
+                        <input type="url" id="main_image" placeholder="URL da imagem principal">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Informações gerais:</label>
+                        <textarea id="message" placeholder="Digite aqui" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="message2">Informações sobre contato:</label>
+                        <textarea id="message2" placeholder="Digite aqui" required></textarea>
+                    </div>
+                </div>
+            </div>
+            
+                <button id="botaodeentrar" type="submit">Cadastrar</button>
+        </form>
+        </section>
+    </main>
+    <script src="../assets/javascript/cadastro_profissionais.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                
+                <div class="profile-header mb-3">
+                    <h1 class="profile-header-title mb-0">Perfil do Usuário</h1>
+                </div>
+                <div id="imagensProfissional" style="display: none;" class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <img id="imagemProfissional" src="" alt="Imagem do Profissional" class="img-fluid imagem-pequena">
+                        </div>
+                        <div class="col">
+                            <img id="imagemPrincipalProfissional" src="" alt="Imagem Principal do Profissional" class="img-fluid imagem-pequena">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <form id="perfilForm">
+                            <div class="form-group">
+                                <label for="nomeUsuario">Nome</label>
+                                <input type="text" class="form-control" id="nomeUsuario" readonly>
+                            </div>
+                            <input type="hidden" id="current-editing-user-id" name="editingUserId" value="">
+                            <input type="hidden" id="current-editing-user-type" name="editingUsertype" value="">
+                            <div class="form-group">
+                                <label for="emailUsuario">Email</label>
+                                <input type="email" class="form-control" id="emailUsuario" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoUsuario">Tipo de Usuário</label>
+                                <select class="form-control" id="tipoUsuario" disabled>
+                                    <option value="comum">Comum</option>
+                                    <option value="profissional">Profissional</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <div id="admin-user-list" class="admin-user-list" style="display: none;">
+                                <h2>Lista de Usuários</h2>
+                                <ul id="userList" class="user-list">
+                                    <!-- Os usuários serão inseridos aqui dinamicamente -->
+                                </ul>
+                            </div>
+                            <div id="admin-pro-user-list" class="admin-pro-user-list" style="display: none;">
+                                <h2>Lista de Profissionais</h2>
+                                <ul id="proUserList" class="pro-user-list">
+                                    <!-- Os usuários serão inseridos aqui dinamicamente -->
+                                </ul>
+                            </div>
+                            <div id="camposProfissional" style="display: none;">
+                                <div class="form-group">
+                                    <label for="category">Categoria</label>
+                                    <select class="form-control" id="category" disabled>
+                                        <option value="">Selecione uma categoria</option>
+                                        <option value="Saude">Saúde</option>
+                                        <option value="Eventos">Eventos</option>
+                                        <option value="Reformas">Reformas</option>
+                                        <option value="Aulas">Aulas</option>
+                                        <option value="Moda">Moda</option>
+                                        <option value="Juridica">Jurídica</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="document">Documento</label>
+                                    <input type="text" class="form-control" id="document" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Endereço</label>
+                                    <input type="text" class="form-control" id="address" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="text" class="form-control" id="phone" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Descrição</label>
+                                    <textarea class="form-control" id="description" rows="3" readonly></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="image">Imagem</label>
+                                    <input type="text" class="form-control" id="image" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mainImage">Imagem Principal</label>
+                                    <input type="text" class="form-control" id="mainImage" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensagem 1</label>
+                                    <input type="text" class="form-control" id="message" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message2">Mensagem 2</label>
+                                    <input type="text" class="form-control" id="message2" readonly>
+                                </div>
+                                <!-- Campos não editáveis -->
+                                <div class="form-group">
+                                    <label for="rating">Avaliação</label>
+                                    <input type="text" class="form-control" id="rating" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientCount">Contagem de Clientes</label>
+                                    <input type="text" class="form-control" id="clientCount" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="isPartner">É Parceiro?</label>
+                                    <select class="form-control" id="isPartner" disabled>
+                                        <option value="true">Sim</option>
+                                        <option value="false">Não</option>
+                                    </select>
+                                </div>
+                            </div>
+            
+                            <button type="button" class="btn btn-warning" id="editarPerfil">Editar</button>
+                            <button type="button" class="btn btn-danger" id="sairConta">Sair da Conta</button>
+                            <button type="button" class="btn btn-danger" id="excluirPerfil">Excluir Conta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom script for this page -->
+    <script src="../assets/javascript/perfil_usuario.js"></script>
+</body>
+</html>
